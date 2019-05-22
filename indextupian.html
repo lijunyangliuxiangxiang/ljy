@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="layui/css/layui.css" rel="stylesheet" />
+		<script type="text/javascript" src="layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div class="layui-icon layui-icon-username" style="font-size: 50px;color: yellow;">登录用户</div>
+
+		<button class="layui-btn layui-btn-primary" style="color: yellow;">标准原始按钮</button>
+		<button class="layui-btn layui-btn-warm">按钮</button>
+		<button class="layui-btn layui-btn-warm layui-btn-lg">按钮</button>
+		<button class="layui-btn layui-btn-warm layui-btn-sm">按钮</button>
+		<button class="layui-btn layui-btn-radius layui-btn-sm">按钮</button>
+		<button class="layui-btn layui-btn-radius layui-btn-sm layui-btn-danger">按钮</button>
+		<button class="layui-btn layui-btn-radius layui-btn-sm layui-btn-disabled">按钮</button>
+
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+			<legend>表单集合演示</legend>
+		</fieldset>
+
+		<div class="layui-form-item">
+			<label class="layui-form-label">单行输入框</label>
+			<div class="layui-input-block">
+				<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+			</div>
+		</div>
+
+		<ul class="layui-nav layui-bg-cyan">
+			<li class="layui-nav-item">
+				<a href="">藏青导航</a>
+			</li>
+			<li class="layui-nav-item layui-this">
+				<a href="">产品</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">大数据</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">解决方案</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="">移动模块</a>
+					</dd>
+					<dd>
+						<a href="">后台模版</a>
+					</dd>
+					<dd>
+						<a href="">电商平台</a>
+					</dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">社区</a>
+			</li>
+		</ul>
+		<div style="padding-top: 10px;">
+		
+		<div class="layui-progress">
+			<div class="layui-progress-bar" lay-percent="40%"></div>
+		</div>
+		</div>
+		
+		
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>带删除功能的Tab</legend>
+</fieldset>
+ 
+<div class="layui-tab layui-tab-card" lay-allowclose="true">
+  <ul class="layui-tab-title">
+    <li class="layui-this">111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+  </ul>
+  <div class="layui-tab-content" style="height: 150px;">
+    <div class="layui-tab-item layui-show">
+     1
+    </div>
+    <div class="layui-tab-item">2</div>
+    <div class="layui-tab-item">3</div>
+    <div class="layui-tab-item">4</div>
+    <div class="layui-tab-item">5</div>
+    <div class="layui-tab-item">6</div>
+  </div>
+</div>             
+		
+
+		<script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			layui.use('element', function() {
+				var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+				//监听导航点击
+				element.on('nav(demo)', function(elem) {
+					//console.log(elem)
+					layer.msg(elem.text());
+				});
+			});
+		</script>
+	</body>
+
+</html>
